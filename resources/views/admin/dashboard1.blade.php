@@ -18,21 +18,27 @@
       </div>
       <div class="card-body">
         <div class="table-responsive">
-          
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-            <label class="custom-control-label" for="defaultUnchecked" value="safe">Safe</label>
-          </div>
-
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
-            <label class="custom-control-label" for="defaultChecked" value="notsafe">Not Safe</label>
-          </div>
-
-          
-
-          <a href="/dashboardsafe/"class="btn btn-success">Go</a>
-          
+          <table class="table">
+            <thead class=" text-primary">
+              <th>user_id</th>
+              <th>user_name</th>
+              <th>line_id</th>
+              <th>temp</th> 
+              <th>temp_time</th> 
+            </thead>
+            <tbody>                
+              @foreach ($tempcheck as $rowtempcheck)
+                <tr>
+                <td>{{ $rowtempcheck->user_id }}</td>
+                <td>{{ $rowtempcheck->user_name }}</td>
+                <td>{{ $rowtempcheck->line_id }}</td>
+                <td>{{ $rowtempcheck->temp }}</td>
+                <td>{{ $rowtempcheck->temp_time }}</td>                    
+                </tr>
+              @endforeach                   
+              
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
