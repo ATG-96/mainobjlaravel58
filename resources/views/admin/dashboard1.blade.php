@@ -33,7 +33,7 @@
                 <td>{{ $rowtempcheck->user_name }}</td>
                 <td>{{ $rowtempcheck->line_id }}</td>
                 <td>{{ $rowtempcheck->temp }}</td>
-                <td>{{ $rowtempcheck->temp_time }}</td>                    
+                <td>{{ $rowtempcheck->temp_time->format('d M Y') }}</td>                    
                 </tr>
               @endforeach                   
               
