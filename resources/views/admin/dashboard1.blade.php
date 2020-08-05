@@ -4,7 +4,7 @@
     Dashboard1-tempcheck
 @endsection
 
-@section('l1')
+@section('l2')
     class="active "
 @endsection
 
