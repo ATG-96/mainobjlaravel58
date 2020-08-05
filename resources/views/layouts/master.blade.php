@@ -58,21 +58,21 @@
         <ul class="nav">
           
           <li @yield('l1')>
-            <a href="/dashboardsafe">
+            <a href="/dashboard">
               <i class="now-ui-icons design_app"></i>
               <p>DashboardSafe</p>
             </a>
           </li>
 
           <li @yield('l2')>
-            <a href="/dashboardtemp">
+            <a href="/dashboard1">
               <i class="now-ui-icons education_atom"></i>
               <p>DashboardTemp</p>
             </a>
           </li>
 
           <li @yield('l3')>
-            <a href="/dashboardtkb">
+            <a href="/dashboard2">
               <i class="now-ui-icons location_map-big"></i>
               <p>TKB</p>
             </a>

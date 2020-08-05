@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Dashboard|Funda IT
+    Dashboard-safechaeck
 @endsection
 
 @section('l1')
