@@ -25,6 +25,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard', 'Admin\DashboardController@getSafeCheck');
     Route::get('/dashboard1','Admin\DashboardController@dashboard1');
     Route::get('/dashboard2','Admin\DashboardController@dashboard2');
+    Route::get('/dashboardchart','LaravelGoogleGraph@index');
     Route::get('/role-register','Admin\DashboardController@registered');
 });
 
