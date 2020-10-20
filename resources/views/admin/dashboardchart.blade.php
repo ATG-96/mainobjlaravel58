@@ -48,7 +48,8 @@
    
    <div class="panel panel-default">
     <div class="panel-heading">
-     <h3 class="panel-title">Percentage of Male and Female Employee</h3>
+     <h3 class="panel-title">Percentage of Male and Female Employee<a href="/dashboardsafe/"class="btn btn-success">Go</a></h3>
+     <h3>$time</h3>
     </div>
     <div class="panel-body" align="center">
      <div id="pie_chart" style="width:750px; height:450px;">
@@ -58,5 +59,32 @@
    </div>
    
   </div>
+
+  <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>user_id</th>
+              <th>user_name</th>
+              <th>line_id</th>
+              <th>temp</th> 
+              <th>temp_time</th> 
+            </thead>
+            <tbody>                
+              @foreach ($tempcheck as $rowtempcheck)
+                <tr>
+                <td>{{ $rowtempcheck->user_id }}</td>
+                <td>{{ $rowtempcheck->user_name }}</td>
+                <td>{{ $rowtempcheck->line_id }}</td>
+                <td>{{ $rowtempcheck->temp }}</td>
+                <td>{{ $rowtempcheck->temp_time }}</td>                    
+                </tr>
+              @endforeach                   
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
  </body>
 </html>
