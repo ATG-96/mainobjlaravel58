@@ -19,6 +19,6 @@ class LaravelGoogleGraph extends Controller
      {
       $array[++$key] = [$value->gender, $value->number];
      }
-     return view('google_pie_chart')->with('gender', json_encode($array));
+     return view('admin.dashboardchart')->with('gender', json_encode($array));
     }
 }
