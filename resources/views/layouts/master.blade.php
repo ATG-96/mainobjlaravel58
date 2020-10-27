@@ -65,28 +65,28 @@
           <li @yield('l1')>
             <a href="/dashboard">
               <i class="now-ui-icons design_app"></i>
-              <p>DashboardSafe</p>
+              <p>User's Dashboard</p>
             </a>
           </li>
 
           <li @yield('l2')>
             <a href="/dashboard1">
               <i class="now-ui-icons education_atom"></i>
-              <p>DashboardTemp</p>
+              <p>Safety Check Dashboard</p>
             </a>
           </li>
 
           <li @yield('l3')>
             <a href="/dashboard2">
               <i class="now-ui-icons location_map-big"></i>
-              <p>TKB</p>
+              <p>Body Temperature Dashboard</p>
             </a>
           </li>
           
           <li @yield('l4')>
             <a href="/role-register">
               <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <p>User's Profile</p>
             </a>
           </li>
           

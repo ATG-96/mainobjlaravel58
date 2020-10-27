@@ -65,7 +65,7 @@
           <h4 class="card-title"> Fast Search</h4>
         </div>
         <div class="card-body">
-          <button type="button" class="btn btn-success">Replied</button>
+          <button type="button" class="btn btn-success">Not Safe</button>
           <button type="button" class="btn btn-danger">Didn't Reply</button>
         </div>
         <h5 class="card-text" style="margin:30px;">Or Search By Student ID</h5>
@@ -76,6 +76,43 @@
       </div>
     </div>
     <!-- start Table colomn 2 -->
+    <div class="col-9">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Users Table View</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>user_id</th>
+                <th>user_name</th>
+                <th>line_id</th>
+                <th>is_safe</th>
+                <th>safe_location</th> 
+                <th>safe_mess</th> 
+                <th>time_update</th>                    
+              </thead>
+              <tbody>                
+                @foreach ($safecheck as $rowsafecheck)
+                  <tr>
+                  <td>{{ $rowsafecheck->user_id }}</td>
+                  <td>{{ $rowsafecheck->user_name }}</td>
+                  <td>{{ $rowsafecheck->line_id }}</td>
+                  <td>{{ $rowsafecheck->is_safe }}</td>
+                  <td>{{ $rowsafecheck->safe_location }}</td>
+                  <td>{{ $rowsafecheck->safe_mess }}</td> 
+                  <td>{{ $rowsafecheck->time_update }}</td>                    
+                  </tr>
+                @endforeach                   
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- end Table colomn 2 -->
 
   </div>

@@ -15,10 +15,24 @@ class DashboardController extends Controller
        return view('admin.register')->with('users',$users);
    }
 
-   public function getSafeCheck()
+   public function getSafeCheck($reply)
    {
        $safecheck = DB::select('SELECT public.users_line.user_id, public.users_line.user_name, public.safe_check.line_id, public.safe_check.is_safe, public.safe_check.safe_location, public.safe_check.safe_mess, public.safe_check.time_update FROM public.safe_check,public.users_line WHERE public.users_line.line_userid = public.safe_check.line_id ');
-       return view('admin.dashboard')->with('safecheck',$safecheck);       
+       //return view('admin.dashboardchart')->with('safecheck',$safecheck); 
+       
+       $data = DB::table('tbl_employee')
+            ->select(
+            DB::raw('gender as gender'),
+            DB::raw('count(*) as number'))
+            ->groupBy('gender')
+            ->get();
+        $array[] = ['Gender', 'Number'];
+        foreach($data as $key => $value)
+        {
+        $array[++$key] = [$value->gender, $value->number];
+        }
+        return view('admin.dashboardchart')->with('gender', json_encode($array))->with('safecheck',$safecheck);
+        //return view('admin.dashboardchart', compact('bus','user','employer'));
    }
 
    public function getSafeCheck1()
