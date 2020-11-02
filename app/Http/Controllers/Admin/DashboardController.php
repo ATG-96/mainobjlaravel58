@@ -53,6 +53,7 @@ class DashboardController extends Controller
         {
         $array[++$key] = [$value->gender, $value->number];
         }
+       
         return view('admin.dashboard2')->with('gender', json_encode($array))->with('tempcheck',$tempcheck);      
         
    }
