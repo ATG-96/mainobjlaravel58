@@ -43,7 +43,7 @@ class ChartContoller extends Controller
         // $b= ($All[0]->count) - ($a[0]->count);
 
         $b= $All - $a;
-        print_r($b);
+        //print_r($b);
 
         $pie = Charts::create('pie', 'highcharts')
          ->title('Rep or not')
